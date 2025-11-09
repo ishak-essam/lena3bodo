@@ -32,9 +32,14 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/primeicons/primeicons.css",
               "src/styles.scss"
             ],
-            "scripts": [],
+
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -46,13 +51,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "7MB",
+                  "maximumError": "5MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "7MB",
+                  "maximumError": "8MB"
                 }
               ],
               "outputHashing": "all"
@@ -96,12 +101,18 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/primeicons/primeicons.css",
               "src/styles.scss"
             ],
+
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "a88f63ea-a547-4b39-bbff-adb606f3d941"
   }
 }

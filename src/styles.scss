@@ -1,1 +1,597 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'swiper/swiper-bundle.css';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Start Variables */
+@import "bootstrap-icons/font/bootstrap-icons.css";
+:root {
+  --main-color: #002D62; /* Dark Blue */
+  --secondary-color: #F7931E; /* Orange */
+  --text-color: #002D62; /* Dark Blue for text */
+  --text-white-color: #fff; /* Dark Blue for text */
+  --background-color: #FFFFFF; /* White */
+  --main-duration: 0.5s;
+  --section-background: #f6f6f6;
+  --section-padding: 30px;
+
+}
+
+ul {
+  padding: 0;
+}
+
+/* End Variables */
+/* Start Global Rules */
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Card General
+--------------------------------------------------------------*/
+
+
+.card-box-a span,
+.card-box-b span,
+.card-box-c span,
+.card-box-d span {
+  line-height: 0;
+}
+
+@media (min-width: 768px) {
+
+  .grid .card-box-a,
+  .grid .card-box-b,
+  .grid .card-box-c,
+  .grid .card-box-d {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.card-box-a,
+.card-box-b,
+.card-box-d {
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-box-a .img-a,
+.card-box-a .img-b,
+.card-box-b .img-a,
+.card-box-b .img-b {
+  transition: 0.8s all ease-in-out;
+}
+
+@media (min-width: 768px) {
+
+  .card-box-a:hover .img-a,
+  .card-box-a:hover .img-b,
+  .card-box-b:hover .img-a,
+  .card-box-b:hover .img-b {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 768px) {
+
+  .card-box-a .price-a,
+  .card-box-b .price-a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .card-box-a .price-a,
+  .card-box-b .price-a {
+    font-size: 1rem;
+  }
+}
+
+.card-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.card-shadow {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-shadow:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 27%, rgba(0, 0, 0, 0.65) 90%);
+}
+
+/*======================================
+//--//-->   PROPERTY - CARD-A
+======================================*/
+@media (min-width: 768px) {
+  .card-box-a:hover .card-overlay-a-content {
+    bottom: 60px;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+  .card-box-a:hover .card-overlay-a-content {
+    bottom: 60px;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 992px) {
+  .card-box-a:hover .card-overlay-a-content {
+    bottom: 64px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-box-a:hover .card-body-a {
+    padding-bottom: 1rem;
+  }
+}
+
+
+.card-overlay-a-content {
+  transition: all 0.5s ease-in;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .card-overlay-a-content {
+    bottom: -20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-overlay-a-content {
+    bottom: 0;
+  }
+}
+
+.card-header-d {
+  color: var(--main-color)
+}
+
+.card-header-a {
+  padding: 0 1rem;
+}
+
+.card-header-a .card-title-a {
+  color: #ffffff;
+  margin-bottom: 0;
+  padding-bottom: 0.7rem;
+}
+
+@media (min-width: 768px) {
+  .card-header-a .card-title-a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-header-a .card-title-a {
+    font-size: 2rem;
+  }
+}
+
+.card-header-a .card-title-a a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.card-body-a {
+  z-index: 2;
+  transition: all 0.5s ease-in;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.card-body-a .price-box {
+  padding-bottom: 0.5rem;
+}
+
+
+/*======================================
+//--//-->   SERVICES - CARD-C
+======================================*/
+.card-box-c {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .card-box-c {
+    margin-bottom: 2rem !important;
+  }
+  .card-box-a .card-overlay-a-content {
+    bottom: 65px !important;
+  }
+
+  .card-box-a .card-body-a {
+    padding-bottom: 1rem !important;
+  }
+  .section-t8 {
+    padding-top: 2rem !important;
+  }
+  /*------/ Title /------*/
+  .title-wrap {
+    padding-bottom: 2rem !important;
+  }
+  /* Bigger active bullet (your ask: 32x32) */
+  .intro-single {
+    padding-top: 9rem !important;
+  }
+  .card-box-c {
+    margin-bottom: 2rem !important;
+  }
+  .card-body-c {
+    padding: 0 !important;
+  }
+
+  .card-box-a,
+  .card-box-b,
+  .card-box-c,
+  .card-box-d {
+    margin-bottom: 2.5rem !important;
+  }
+  swiper-container.hero::part(button-next),
+  swiper-container.hero::part(button-prev) {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+
+.card-header-c {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.card-body-c {
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+
+.card-footer-c {
+  padding-left: 0.5rem;
+}
+
+.card-box-ico {
+  padding: 1rem 3rem 1rem 2.5rem;
+  border: 5px solid var(--secondary-color);
+}
+
+.card-box-ico span {
+  font-size: 4rem;
+  color: #000000;
+}
+
+.title-c {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-right: -40px;
+}
+
+@media (min-width: 768px) {
+  .title-c {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .title-c {
+    font-size: 2.5rem;
+  }
+}
+
+/*======================================
+//--//-->   SERVICES - CARD-C
+======================================*/
+.card-box-c {
+  position: relative;
+}
+
+.card-header-c {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.card-body-c {
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+
+.card-footer-c {
+  padding-left: 0.5rem;
+}
+
+.card-box-ico {
+  padding: 1rem 3rem 1rem 2.5rem;
+  border: 5px solid var(--secondary-color);
+}
+
+.card-box-ico span {
+  font-size: 4rem;
+  color: #000000;
+}
+
+.title-c {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-right: -40px;
+}
+
+@media (min-width: 768px) {
+  .title-c {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .title-c {
+    font-size: 2.5rem;
+  }
+}
+
+/*======================================
+//--//-->   AGENTS - CARD-D
+======================================*/
+.card-box-d .card-overlay-hover {
+  transition: all 0.2s ease-in-out;
+  padding: 15px 40px 15px 35px;
+}
+
+@media (min-width: 768px) {
+  .card-box-d .card-overlay-hover {
+    padding: 5px 15px 5px 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-box-d .card-overlay-hover {
+    padding: 5px 40px 5px 35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-box-d .card-overlay-hover {
+    padding: 15px 40px 5px 35px;
+  }
+}
+
+.card-box-d .title-d {
+  transition: 0.3s ease-in-out;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .card-box-d .title-d {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-box-d .title-d {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-box-d .title-d {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+}
+
+.card-box-d .content-d {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  transform: translateY(-40px);
+}
+
+@media (min-width: 768px) {
+  .card-box-d .content-d {
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-box-d .card-body-d p {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-box-d .card-body-d p {
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 1rem;
+  }
+}
+
+.card-box-d .info-agents {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.card-box-d .card-footer-d {
+  transition: 0.5s ease-in-out;
+  transform: translateY(40px);
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 0;
+}
+
+.card-box-d .list-inline-item:not(:last-child) {
+  margin-left: 25px;
+}
+
+.card-box-d:hover .card-overlay-hover {
+  background-color: var(--secondary-color);
+  opacity: .75;
+}
+
+.card-box-d:hover .title-d,
+.card-box-d:hover .content-d,
+.card-box-d:hover .info-agents,
+.card-box-d:hover .card-footer-d {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*------/ Agent Single /------*/
+.agent-info-box .socials-footer {
+  margin-top: 2rem;
+}
+
+.agent-info-box .socials-footer li {
+  margin-left: 1.5rem;
+}
+
+/* optional helpers */
+.overlay.overlay-a {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .45));
+}
+
+.display-table {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.table-cell {
+  width: 100%;
+}
+
+.color-b {
+  color: var(--secondary-color);
+}
+
+
+/*------/ Space Padding /------*/
+.section-t8 {
+  padding-top: 8rem;
+}
+
+/*------/ Title /------*/
+.title-wrap {
+  padding-bottom: 4rem;
+}
+
+.title-a {
+  text-decoration: none;
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+
+
+/*------/ Intro Single /------*/
+.intro-single {
+  padding: 3rem 0 3rem;
+}
+
+@media (max-width: 767px) {
+  .intro-single {
+    padding-top: 9rem;
+  }
+}
+
+.intro-single .title-single-box {
+  padding: 1rem  1rem 2rem 0;
+}
+
+.intro-single .title-single-box {
+  border-right: 3px solid var(--secondary-color);
+}
+
+.intro-single .title-single-box .title-single {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+@media (min-width: 768px) {
+  .intro-single .title-single-box .title-single {
+    font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .intro-single .title-single-box .title-single {
+    font-size: 2.5rem;
+  }
+}
+
+.intro-single .breadcrumb-box {
+  padding: 1rem 0.5rem 0 0 ;
+}
+
+.intro-single .breadcrumb {
+  background-color: transparent;
+  padding-right: 0;
+  padding-left: 0;
+}

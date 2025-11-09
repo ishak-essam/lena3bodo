@@ -1,0 +1,39 @@
+.back-to-top {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--secondary-color, #7F6AC4);
+  color: #fff;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .18);
+
+  i {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+
+  &:hover {
+    transform: translateY(6px);
+  }
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Optional: hide on very small screens */
+@media (max-width: 360px) {
+  .back-to-top {
+    left: 10px;
+    bottom: 10px;
+  }
+}

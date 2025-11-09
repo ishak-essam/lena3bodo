@@ -1,0 +1,45 @@
+
+.navbar {
+  background-color: var(--main-color);
+  position: sticky; /* Stick to the top */
+  top: 0; /* Distance from the top */
+  z-index: 1020; /* Ensure it stays above content */
+
+  /* Optional: Add a shadow when navbar is sticky */
+  &.sticky {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-brand {
+    padding: 4px;
+    border: 2px solid var(--main-color); /* Border with main color */
+    border-radius: 50%; /* Rounded edges */
+    background-color: var(--section-background); /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    transition: transform var(--main-duration), box-shadow var(--main-duration);
+    text-decoration: none; /* Remove underline */
+    color: var(--text-color);
+    font-size: 24px;
+
+    &:hover {
+      transform: scale(1.02); /* Slight zoom on hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
+    }
+  }
+
+
+  .nav-link {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0 10px;
+    color: var(--text-white-color);
+
+    &.active {
+      font-weight: 600;
+      color: var(--secondary-color);
+    }
+  }
+}
+.navbar-toggler{
+  background-color: var(--secondary-color);
+}
